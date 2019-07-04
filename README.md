@@ -5,7 +5,7 @@ An HTTP client wrapped around Axios
 
 ```
 var requests = [
-	httpClient.get('/api/v1/endpoint'),
+	httpClient.get('/api/v1/endpoint1'),
 	httpClient.get('/api/v1/endpoint2')
 ];
 

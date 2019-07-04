@@ -3,6 +3,7 @@ An HTTP client wrapped around Axios
 
 ## How to use
 
+```
 var requests = [
 	httpClient.get('/api/v1/endpoint'),
 	httpClient.get('/api/v1/endpoint2')
@@ -23,9 +24,11 @@ function cancelRequests() {
 		request.cancel();
 	});
 }
+```
 
 ---------------------------------------------------------------------------------
 
+```
 var request = httpClient.get/delete/head/options(
 	'/api/v1/endpoint',
 	{
@@ -41,11 +44,13 @@ var request = httpClient.get/delete/head/options(
 	console.log(error);
 });
 
-Can be cancelled before request finishes
+// can be cancelled before request finishes
 request.cancel();
+```
 
 ---------------------------------------------------------------------------------
 
+```
 var request = httpClient.post/put/patch(
 	'/api/v1/endpoint',
 	new URLSearchParams(new FormData(document.getElementById('my-form-id'))),
@@ -62,11 +67,13 @@ var request = httpClient.post/put/patch(
 	console.log(error);
 });
 
-Can be cancelled before request finishes
+// can be cancelled before request finishes
 request.cancel();
+```
 
 ---------------------------------------------------------------------------------
 
+```
 var polling = httpClient.poll(
 	'/api/v1/endpoint',
 	{
@@ -91,6 +98,6 @@ var polling = httpClient.poll(
 	}
 );
 
-Can be cancelled
+// can be cancelled
 polling.cancel();
-
+```

@@ -20,7 +20,7 @@ httpClient.all(requests)
 });
 
 function cancelRequests() {
-	_.each(requests, function (request) {
+	requests.forEach(function (request) {
 		request.cancel();
 	});
 }
